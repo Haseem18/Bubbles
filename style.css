@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+#root .author {
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: floatOut 2s ease-in-out forwards;
+    opacity: 0;
+}
+
+.author .author_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes floatOut {
+    0% {
+        transform: scale(0.8) translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2) translateY(-1rem);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5) translateY(-4rem);
+        opacity: 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+    html {
+        font-size: 52%;
+    }
+
+    #root .author {
+        width: 7rem;
+        height: 7rem;
+    }
+}
