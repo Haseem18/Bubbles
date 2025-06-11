@@ -20,7 +20,7 @@ const createBubble = (event) => {
     authorImage.classList.add("author_image")
 
     const index = Math.floor(Math.random() * authors.length);
-    authorImage.src = `../Event Quotes/img/${authors[index]}`;
+    authorImage.src = `./img/${authors[index]}`;
 
     const xPos = event.clientX;
     const yPos = event.clientY;
